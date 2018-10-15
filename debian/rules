@@ -1,4 +1,13 @@
 #!/usr/bin/make -f
 
+VERSION=1.0.0
+
 %:
 	dh $@
+
+override_dh_auto_build:
+	wget -c -O ../../downloads/esp32-${VERSION}.zip https://github.com/espressif/arduino-esp32/releases/download/${VERSION}/esp32-${VERSION}.zip
+	unzip ../../downloads/esp32-${VERSION}.zip
+
+override_dh_auto_clean:
+	rm -rf esp32-${VERSION}

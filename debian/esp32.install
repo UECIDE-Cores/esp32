@@ -1,6 +1,6 @@
+debian/core.txt cores/esp32
 esp32-1.0.0/cores/esp32/ cores/esp32
 esp32-1.0.0/tools/gen_esp32part.exe cores/esp32
 esp32-1.0.0/tools/gen_esp32part.py cores/esp32
 esp32-1.0.0/tools/partitions/ cores/esp32
 esp32-1.0.0/tools/sdk/ cores/esp32
-debian/core.txt cores/esp32

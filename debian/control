@@ -1,5 +1,5 @@
 Source: esp32
-Section: main
+Section: cores
 Priority: extra
 Maintainer: Matt Jenkins <matt@majenko.co.uk>
 XBSC-TieCore: esp32
@@ -7,6 +7,7 @@ Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.4
 
 Package: esp32
+Section: cores
 Architecture: all
 XBSC-Group: Cores
 XBSC-Subgroup: ESP32
@@ -14,215 +15,247 @@ Depends: esptool-esp32
 Description: ESP32 Arduino Compatability
 
 Package: libarduinoota
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Protocols
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Protocols
 Depends: esp32
 Provides: ArduinoOTA.h
 Description: ArduinoOTA library
 
 Package: libasyncudp
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Networking
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Networking
 Depends: esp32
 Provides: AsyncUDP.h
 Description: AsyncUDP library
 
 Package: libazureiot
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Networking
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Networking
 Depends: esp32
 Provides: AzureIoT.h
 Description: AzureIoT library
 
 Package: libble
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Protocols
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Protocols
 Depends: esp32
 Provides: BLE.h
 Description: BLE library
 
 Package: libbluetoothserial
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Serial
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Serial
 Depends: esp32
 Provides: BluetoothSerial.h
 Description: BluetoothSerial library
 
 Package: libdnsserver
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Networking
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Networking
 Depends: esp32
 Provides: DNSServer.h
 Description: DNSServer library
 
 Package: libeeprom
+Section: libraries
 Architecture: all
-XBSC-SubGroup: Libraries
-XBSC-SubGroup: Storage
-XBSC-Subgroup: EEPROM
+XBSC-Group: Libraries
+XBSC-Subgroup: Storage
+XBSC-Subsubgroup: EEPROM
 Depends: esp32
 Provides: EEPROM.h
 Description: EEPROM library
 
 Package: libesp32
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: BoardSupport
+XBSC-Subgroup: BoardSupport
 Depends: esp32
 Provides: ESP32.h
 Description: ESP32 library
 
 Package: libespmdns
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Networking
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Networking
 Depends: esp32
 Provides: ESPmDNS.h
 Description: ESPmDNS library
 
 Package: libfs
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Storage
+XBSC-Subgroup: Storage
 Depends: esp32
 Provides: FS.h
 Description: FS library
 
 Package: libhttpclient
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Networking
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Networking
 Depends: esp32
 Provides: HTTPClient.h
 Description: HTTPClient library
 
 Package: libnetbios
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Networking
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Networking
 Depends: esp32
 Provides: NetBIOS.h
 Description: NetBIOS library
 
 Package: libpreferences
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Storage
+XBSC-Subgroup: Storage
 Depends: esp32
 Provides: Preferences.h
 Description: Preferences library
 
 Package: libsd
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Storage
-XBSC-SubSubgroup: SD and MMC
+XBSC-Subgroup: Storage
+XBSC-Subsubgroup: SD and MMC
 Depends: esp32
 Provides: SD.h
 Description: SD library
 
 Package: libsd-mmc
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Storage
-XBSC-SubSubgroup: SD and MMC
+XBSC-Subgroup: Storage
+XBSC-Subsubgroup: SD and MMC
 Depends: esp32
 Provides: SD-UL-MMC.h
 Description: SD MMC library
 
 Package: libsimpleble
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Protocols
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Protocols
 Depends: esp32
 Provides: SimpleBLE.h
 Description: SimpleBLE library
 
 Package: libspi
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: SPI
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: SPI
 Depends: esp32
 Provides: SPI.h
 Description: SPI library
 
 Package: libspiffs
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Storage
+XBSC-Subgroup: Storage
 Depends: esp32
 Provides: SPIFFS.h
 Description: SPIFFS library
 
 Package: libticker
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Time
-XBSC-SubSubgroup: Timers
+XBSC-Subgroup: Time
+XBSC-Subsubgroup: Timers
 Depends: esp32
 Provides: Ticker.h
 Description: Ticker library
 
 Package: libupdate
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: BoardSupport
+XBSC-Subgroup: BoardSupport
 Depends: esp32
 Provides: Update.h
 Description: Update library
 
 Package: libwebserver
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Networking
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Networking
 Depends: esp32
 Provides: WebServer.h
 Description: WebServer library
 
 Package: libwifi
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Networking
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Networking
 Depends: esp32
 Provides: WiFi.h
 Description: WiFi library
 
 Package: libwificlientsecure
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: Networking
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: Networking
 Depends: esp32
 Provides: WiFiClientSecure.h
 Description: WiFiClientSecure library
 
 Package: libwire
+Section: libraries
 Architecture: all
 XBSC-Group: Libraries
-XBSC-SubGroup: Communications
-XBSC-SubSubgroup: I2C
+XBSC-Subgroup: Communications
+XBSC-Subsubgroup: I2C
 Depends: esp32
 Provides: Wire.h
 Description: Wire library
+
+Package: esp32-generic
+Section: boards
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: ESP32 Dev Module
 
 
 
