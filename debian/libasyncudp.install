@@ -1,0 +1,5 @@
+esp32-1.0.0/libraries/AsyncUDP/examples/ libraries/Communications/AsyncUDP
+esp32-1.0.0/libraries/AsyncUDP/keywords.txt libraries/Communications/AsyncUDP
+esp32-1.0.0/libraries/AsyncUDP/library.json libraries/Communications/AsyncUDP
+esp32-1.0.0/libraries/AsyncUDP/library.properties libraries/Communications/AsyncUDP
+esp32-1.0.0/libraries/AsyncUDP/src/ libraries/Communications/AsyncUDP

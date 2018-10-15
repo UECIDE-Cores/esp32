@@ -1,0 +1,3 @@
+esp32-1.0.0/libraries/DNSServer/examples/ libraries/Communications/DNSServer
+esp32-1.0.0/libraries/DNSServer/library.properties libraries/Communications/DNSServer
+esp32-1.0.0/libraries/DNSServer/src/ libraries/Communications/DNSServer

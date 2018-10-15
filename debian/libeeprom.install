@@ -1,0 +1,5 @@
+esp32-1.0.0/libraries/EEPROM/EEPROM.cpp libraries/Storage/EEPROM
+esp32-1.0.0/libraries/EEPROM/EEPROM.h libraries/Storage/EEPROM
+esp32-1.0.0/libraries/EEPROM/examples/ libraries/Storage/EEPROM
+esp32-1.0.0/libraries/EEPROM/keywords.txt libraries/Storage/EEPROM
+esp32-1.0.0/libraries/EEPROM/library.properties libraries/Storage/EEPROM

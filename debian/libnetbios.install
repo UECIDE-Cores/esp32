@@ -1,0 +1,4 @@
+esp32-1.0.0/libraries/NetBIOS/examples/ libraries/Communications/NetBIOS
+esp32-1.0.0/libraries/NetBIOS/keywords.txt libraries/Communications/NetBIOS
+esp32-1.0.0/libraries/NetBIOS/library.properties libraries/Communications/NetBIOS
+esp32-1.0.0/libraries/NetBIOS/src/ libraries/Communications/NetBIOS

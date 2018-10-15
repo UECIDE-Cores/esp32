@@ -1,0 +1,3 @@
+esp32-1.0.0/libraries/SimpleBLE/examples/ libraries/Communications/SimpleBLE
+esp32-1.0.0/libraries/SimpleBLE/library.properties libraries/Communications/SimpleBLE
+esp32-1.0.0/libraries/SimpleBLE/src/ libraries/Communications/SimpleBLE

@@ -1,0 +1,4 @@
+esp32-1.0.0/libraries/SPI/examples/ libraries/Communications/SPI
+esp32-1.0.0/libraries/SPI/keywords.txt libraries/Communications/SPI
+esp32-1.0.0/libraries/SPI/library.properties libraries/Communications/SPI
+esp32-1.0.0/libraries/SPI/src/ libraries/Communications/SPI

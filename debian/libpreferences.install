@@ -1,0 +1,4 @@
+esp32-1.0.0/libraries/Preferences/examples/ libraries/Storage/Preferences
+esp32-1.0.0/libraries/Preferences/keywords.txt libraries/Storage/Preferences
+esp32-1.0.0/libraries/Preferences/library.properties libraries/Storage/Preferences
+esp32-1.0.0/libraries/Preferences/src/ libraries/Storage/Preferences

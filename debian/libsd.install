@@ -1,0 +1,4 @@
+esp32-1.0.0/libraries/SD/README.md libraries/Storage/SD
+esp32-1.0.0/libraries/SD/examples/ libraries/Storage/SD
+esp32-1.0.0/libraries/SD/library.properties libraries/Storage/SD
+esp32-1.0.0/libraries/SD/src/ libraries/Storage/SD

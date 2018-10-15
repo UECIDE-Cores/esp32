@@ -1,0 +1,3 @@
+esp32-1.0.0/libraries/SPIFFS/examples/ libraries/Storage/SPIFFS
+esp32-1.0.0/libraries/SPIFFS/library.properties libraries/Storage/SPIFFS
+esp32-1.0.0/libraries/SPIFFS/src/ libraries/Storage/SPIFFS

@@ -1,0 +1,4 @@
+esp32-1.0.0/libraries/WebServer/examples/ libraries/Communications/WebServer
+esp32-1.0.0/libraries/WebServer/keywords.txt libraries/Communications/WebServer
+esp32-1.0.0/libraries/WebServer/library.properties libraries/Communications/WebServer
+esp32-1.0.0/libraries/WebServer/src/ libraries/Communications/WebServer

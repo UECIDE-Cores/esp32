@@ -1,0 +1,4 @@
+esp32-1.0.0/libraries/Update/examples/ libraries/BoardSupport/Update
+esp32-1.0.0/libraries/Update/keywords.txt libraries/BoardSupport/Update
+esp32-1.0.0/libraries/Update/library.properties libraries/BoardSupport/Update
+esp32-1.0.0/libraries/Update/src/ libraries/BoardSupport/Update

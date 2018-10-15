@@ -1,0 +1,228 @@
+Source: esp32
+Section: main
+Priority: extra
+Maintainer: Matt Jenkins <matt@majenko.co.uk>
+XBSC-TieCore: esp32
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+
+Package: esp32
+Architecture: all
+XBSC-Group: Cores
+XBSC-Subgroup: ESP32
+Depends: esptool-esp32
+Description: ESP32 Arduino Compatability
+
+Package: libarduinoota
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Protocols
+Depends: esp32
+Provides: ArduinoOTA.h
+Description: ArduinoOTA library
+
+Package: libasyncudp
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Networking
+Depends: esp32
+Provides: AsyncUDP.h
+Description: AsyncUDP library
+
+Package: libazureiot
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Networking
+Depends: esp32
+Provides: AzureIoT.h
+Description: AzureIoT library
+
+Package: libble
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Protocols
+Depends: esp32
+Provides: BLE.h
+Description: BLE library
+
+Package: libbluetoothserial
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Serial
+Depends: esp32
+Provides: BluetoothSerial.h
+Description: BluetoothSerial library
+
+Package: libdnsserver
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Networking
+Depends: esp32
+Provides: DNSServer.h
+Description: DNSServer library
+
+Package: libeeprom
+Architecture: all
+XBSC-SubGroup: Libraries
+XBSC-SubGroup: Storage
+XBSC-Subgroup: EEPROM
+Depends: esp32
+Provides: EEPROM.h
+Description: EEPROM library
+
+Package: libesp32
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: BoardSupport
+Depends: esp32
+Provides: ESP32.h
+Description: ESP32 library
+
+Package: libespmdns
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Networking
+Depends: esp32
+Provides: ESPmDNS.h
+Description: ESPmDNS library
+
+Package: libfs
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Storage
+Depends: esp32
+Provides: FS.h
+Description: FS library
+
+Package: libhttpclient
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Networking
+Depends: esp32
+Provides: HTTPClient.h
+Description: HTTPClient library
+
+Package: libnetbios
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Networking
+Depends: esp32
+Provides: NetBIOS.h
+Description: NetBIOS library
+
+Package: libpreferences
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Storage
+Depends: esp32
+Provides: Preferences.h
+Description: Preferences library
+
+Package: libsd
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Storage
+XBSC-SubSubgroup: SD and MMC
+Depends: esp32
+Provides: SD.h
+Description: SD library
+
+Package: libsd-mmc
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Storage
+XBSC-SubSubgroup: SD and MMC
+Depends: esp32
+Provides: SD-UL-MMC.h
+Description: SD MMC library
+
+Package: libsimpleble
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Protocols
+Depends: esp32
+Provides: SimpleBLE.h
+Description: SimpleBLE library
+
+Package: libspi
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: SPI
+Depends: esp32
+Provides: SPI.h
+Description: SPI library
+
+Package: libspiffs
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Storage
+Depends: esp32
+Provides: SPIFFS.h
+Description: SPIFFS library
+
+Package: libticker
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Time
+XBSC-SubSubgroup: Timers
+Depends: esp32
+Provides: Ticker.h
+Description: Ticker library
+
+Package: libupdate
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: BoardSupport
+Depends: esp32
+Provides: Update.h
+Description: Update library
+
+Package: libwebserver
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Networking
+Depends: esp32
+Provides: WebServer.h
+Description: WebServer library
+
+Package: libwifi
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Networking
+Depends: esp32
+Provides: WiFi.h
+Description: WiFi library
+
+Package: libwificlientsecure
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: Networking
+Depends: esp32
+Provides: WiFiClientSecure.h
+Description: WiFiClientSecure library
+
+Package: libwire
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubgroup: I2C
+Depends: esp32
+Provides: Wire.h
+Description: Wire library
+
+
+
