@@ -1,0 +1,2 @@
+debian/boards/alksesp32/board.txt boards/ESP32/alksesp32
+esp32-1.0.0/variants/alksesp32/pins_arduino.h boards/ESP32/alksesp32

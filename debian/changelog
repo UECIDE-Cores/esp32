@@ -1,3 +1,21 @@
+esp32 (1.0.6) uecide; urgency=low
+
+  * Fixed parts recipe
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 16 Oct 2018 10:52:19 +0100
+
+esp32 (1.0.5) uecide; urgency=low
+
+  * Fixed library install files
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 16 Oct 2018 10:44:47 +0100
+
+esp32 (1.0.4) uecide; urgency=low
+
+  * Fixed libraries
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 16 Oct 2018 10:38:10 +0100
+
 esp32 (1.0.3) uecide; urgency=low
 
   * Fixed structure

@@ -1,0 +1,30 @@
+description=Electronic SweetPeas - ESP320
+upload.tool=esptool
+upload.maximum_size=1310720
+upload.maximum_data_size=327680
+upload.wait_for_upload_port=true
+serial.disableDTR=true
+serial.disableRTS=true
+build.mcu=esp32
+build.core=esp32
+build.variant=esp320
+build.board=ESP320
+build.f_cpu=240000000L
+build.flash_mode=qio
+build.flash_size=4MB
+build.boot=dio
+build.partitions=default
+build.defines=
+
+options.FlashFreq.name=Flash Frequency
+options.FlashFreq.default=80
+options.FlashFreq.80.name=80MHz
+options.FlashFreq.80.build.flash_freq=80m
+options.FlashFreq.40.name=40MHz
+options.FlashFreq.40.build.flash_freq=40m
+build.flash_freq=${option:FlashFreq.build.flash_freq}
+
+name=esp320
+family=esp32
+group=ESP32
+core=esp32

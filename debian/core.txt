@@ -51,3 +51,35 @@ compile.autogen.bin.macos=${programmer:esptool-esp32,root}/macos/esptool::--chip
 compile.autogen.bin.windows=${programmer:esptool-esp32,root}/windows/esptool.exe::--chip::esp32::elf2image::--flash_mode::${build.flash_mode}::--flash_freq::${build.flash_freq}::-o::${build.path}/${filename}.bin::${build.path}/${filename}.elf
 
 
+options.UploadSpeed.name=Upload Speed
+options.UploadSpeed.default=921600
+options.UploadSpeed.921600.name=921600
+options.UploadSpeed.921600.upload.speed=921600
+options.UploadSpeed.115200.name=115200
+options.UploadSpeed.115200.upload.speed=115200
+options.UploadSpeed.256000.name=256000
+options.UploadSpeed.256000.upload.speed=256000
+options.UploadSpeed.230400.upload.speed=230400
+options.UploadSpeed.230400.name=230400
+options.UploadSpeed.460800.name=460800
+options.UploadSpeed.460800.upload.speed=460800
+options.UploadSpeed.512000.name=512000
+options.UploadSpeed.512000.upload.speed=512000
+upload.speed=${option:UploadSpeed.upload.speed}
+
+options.DebugLevel.name=Debug Level
+options.DebugLevel.default=none
+options.DebugLevel.none.name=None
+options.DebugLevel.none.build.code_debug=0
+options.DebugLevel.error.name=Error
+options.DebugLevel.error.build.code_debug=1
+options.DebugLevel.warn.name=Warn
+options.DebugLevel.warn.build.code_debug=2
+options.DebugLevel.info.name=Info
+options.DebugLevel.info.build.code_debug=3
+options.DebugLevel.debug.name=Debug
+options.DebugLevel.debug.build.code_debug=4
+options.DebugLevel.verbose.name=Verbose
+options.DebugLevel.verbose.build.code_debug=5
+build.code_debug=${option:DebugLevel.build.code_debug}
+

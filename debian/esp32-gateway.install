@@ -1,0 +1,2 @@
+debian/boards/esp32-gateway/board.txt boards/ESP32/esp32-gateway
+esp32-1.0.0/variants/esp32-gateway/pins_arduino.h boards/ESP32/esp32-gateway

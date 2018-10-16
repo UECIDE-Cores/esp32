@@ -251,13 +251,290 @@ Depends: esp32
 Provides: Wire.h
 Description: Wire library
 
+Package: alksesp32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: ALKS ESP32
+
+Package: coreesp32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Microduino-CoreESP32
+
+Package: cw02
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: XinaBox CW02
+
+Package: d32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: LOLIN D32
+
+Package: d32-pro
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: LOLIN D32 PRO
+
+Package: esp320
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Electronic SweetPeas - ESP320
+
+Package: esp32doit-devkit-v1
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: DOIT ESP32 DEVKIT V1
+
+Package: esp32-evb
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: OLIMEX ESP32-EVB
+
+Package: esp32-gateway
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: OLIMEX ESP32-GATEWAY
+
 Package: esp32-generic
-#Section: boards
 Architecture: all
 XBSC-Group: Boards
 XBSC-Subgroup: ESP32
 Depends: esp32
 Description: ESP32 Dev Module
 
+Package: esp32thing
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: SparkFun ESP32 Thing
 
+Package: esp32vn-iot-uno
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: ESP32vn IoT Uno
+
+Package: esp32wrover
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: ESP32 Wrover Module
+
+Package: espea32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: ESPea32
+
+Package: espectro32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: ESPectro32
+
+Package: espino32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: ThaiEasyElec's ESPino32
+
+Package: featheresp32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Adafruit ESP32 Feather
+
+Package: firebeetle32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: FireBeetle-ESP32
+
+Package: heltec-wifi-kit-32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Heltec_WIFI_Kit_32
+
+Package: heltec-wifi-lora-32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Heltec_WIFI_LoRa_32
+
+Package: hornbill32dev
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Hornbill ESP32 Dev
+
+Package: hornbill32minima
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Hornbill ESP32 Minima
+
+Package: intorobot-fig
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: IntoRobot Fig
+
+Package: lolin32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: WEMOS LOLIN32
+
+Package: m5stack-core-esp32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: M5Stack-Core-ESP32
+
+Package: m5stack-fire
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: M5Stack-FIRE
+
+Package: mhetesp32devkit
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: MH ET LIVE ESP32DevKIT
+
+Package: mhetesp32minikit
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: MH ET LIVE ESP32MiniKit
+
+Package: nano32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Nano32
+
+Package: nina-w10
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: u-blox NINA-W10 series (ESP32)
+
+Package: node32s
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Node32s
+
+Package: nodemcu-32s
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: NodeMCU-32S
+
+Package: odroid-esp32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: ODROID ESP32
+
+Package: onehorse32dev
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Onehorse ESP32 Dev Module
+
+Package: pico32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: ESP32 Pico Kit
+
+Package: pocket-32
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Dongsen Tech Pocket 32
+
+Package: quantum
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Noduino Quantum
+
+Package: ttgo-lora32-v1
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: TTGO LoRa32-OLED V1
+
+Package: wemosbat
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: "WeMos" WiFi&Bluetooth Battery
+
+Package: widora-air
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: Widora AIR
+
+Package: wipy3
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: ESP32
+Depends: esp32
+Description: WiPy 3.0
 

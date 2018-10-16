@@ -1,31 +1,21 @@
-description=ESP32 Dev Module
-group=ESP32
-family=esp32
-core=esp32
-
+description=ALKS ESP32
 upload.tool=esptool
 upload.maximum_size=1310720
 upload.maximum_data_size=327680
 upload.wait_for_upload_port=true
-
 serial.disableDTR=true
 serial.disableRTS=true
-
 build.mcu=esp32
 build.core=esp32
-build.variant=esp32
-build.board=ESP32_DEV
-
+build.variant=alksesp32
+build.board=ALKS
 build.f_cpu=240000000L
-build.boot=${option:FlashMode.build.flash_boot}
-
-options.PSRAM.name=PSRAM
-options.PSRAM.default=disabled
-options.PSRAM.disabled.name=Disabled
-options.PSRAM.disabled.build.defines=
-options.PSRAM.enabled.name=Enabled
-options.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-issue
-build.defines=${option:PSRAM.build.defines}
+build.flash_size=4MB
+build.flash_freq=40m
+build.flash_mode=dio
+build.boot=dio
+build.partitions=default
+build.defines=
 
 options.PartitionScheme.name=Partition Scheme
 options.PartitionScheme.default=defaultschem
@@ -70,8 +60,9 @@ options.FlashSize.default=4M
 options.FlashSize.4M.name=4MB (32Mb)
 options.FlashSize.4M.build.flash_size=4MB
 options.FlashSize.2M.name=2MB (16Mb)
-options.FlashSize.2M.build.flash_size=2MB
-options.FlashSize.2M.build.partitions=minimal
 build.flash_size=${option:FlashSize.build.flash_size}
 
-name=esp32-generic
+name=alksesp32
+family=esp32
+group=ESP32
+core=esp32

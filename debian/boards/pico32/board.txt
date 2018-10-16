@@ -1,0 +1,23 @@
+description=ESP32 Pico Kit
+upload.tool=esptool
+upload.maximum_size=1310720
+upload.maximum_data_size=327680
+upload.wait_for_upload_port=true
+serial.disableDTR=true
+serial.disableRTS=true
+build.mcu=esp32
+build.core=esp32
+build.variant=pico32
+build.board=ESP32_PICO
+build.f_cpu=240000000L
+build.flash_size=4MB
+build.flash_freq=80m
+build.flash_mode=dio
+build.boot=dio
+build.partitions=default
+build.defines=
+
+name=pico32
+family=esp32
+group=ESP32
+core=esp32
