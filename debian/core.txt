@@ -18,12 +18,6 @@ includes.sdk=-I${core.root}/sdk/include/config::-I${core.root}/sdk/include/blued
 
 core.includes=${includes.sdk}
 
-
-"/home/matt/.arduino15/packages/esp32/tools/xtensa-esp32-elf-gcc/1.22.0-80-g6c4433a-5.2.0/bin/xtensa-esp32-elf-gcc"
-
-"-L/home/matt/.arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/lib"
-"-L/home/matt/.arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/ld"
-
 core.ldflags=-nostdlib::-T::esp32_out.ld::-T::esp32.common.ld::-T::esp32.rom.ld::-T::esp32.peripherals.ld::-T::esp32.rom.spiram_incompatible_fns.ld::-u::ld_include_panic_highint_hdl::-u::call_user_start_cpu0::-Wl,--gc-sections::-Wl,-static::-Wl,--undefined=uxTopUsedPriority::-u::__cxa_guard_dummy::-u::__cxx_fatal_exception::-L${core.root}/sdk/lib::-L${core.root}/sdk/ld
 
 core.libs=-lopenssl::-lbtdm_app::-lfatfs::-lwps::-lcoexist::-lwear_levelling::-lesp_http_client::-lhal::-lnewlib::-ldriver::-lbootloader_support::-lpp::-lmesh::-lsmartconfig::-ljsmn::-lwpa::-lethernet::-lphy::-lapp_trace::-lconsole::-lulp::-lwpa_supplicant::-lfreertos::-lbt::-lmicro-ecc::-lcxx::-lxtensa-debug-module::-lmdns::-lvfs::-lsoc::-lcore::-lsdmmc::-lcoap::-ltcpip_adapter::-lc_nano::-lesp-tls::-lrtc::-lspi_flash::-lwpa2::-lesp32::-lapp_update::-lnghttp::-lspiffs::-lespnow::-lnvs_flash::-lesp_adc_cal::-llog::-lsmartconfig_ack::-lexpat::-lm::-lc::-lheap::-lmbedtls::-llwip::-lnet80211::-lpthread::-ljson::
@@ -49,12 +43,11 @@ icon.22=icons/expressif_22.png
 programmer.chip=esp32
 
 
-compile.autogen.parts=python::${core.root}/tools/gen_esp32part.py::-q::${core.root}/partitions/${build.partitions}.csv::${build.path}/${filename}.partitions.bin
+compile.autogen.parts=python::${core.root}/gen_esp32part.py::-q::${core.root}/partitions/${build.partitions}.csv::${build.path}/${filename}.partitions.bin
+compile.autogen.parts.windows=${core.root}/gen_esp32part.exe::-q::${core.root}/partitions/${build.partitions}.csv::${build.path}/${filename}.partitions.bin
 
 compile.autogen.bin.linux=${programmer:esptool-esp32,programmer.interpreter}::${programmer:esptool-esp32,root}/linux/esptool.py::--chip::esp32::elf2image::--flash_mode::${build.flash_mode}::--flash_freq::${build.flash_freq}::-o::${build.path}/${filename}.bin::${build.path}/${filename}.elf
 compile.autogen.bin.macos=${programmer:esptool-esp32,root}/macos/esptool::--chip::esp32::elf2image::--flash_mode::${build.flash_mode}::--flash_freq::${build.flash_freq}::-o::${build.path}/${filename}.bin::${build.path}/${filename}.elf
 compile.autogen.bin.windows=${programmer:esptool-esp32,root}/windows/esptool.exe::--chip::esp32::elf2image::--flash_mode::${build.flash_mode}::--flash_freq::${build.flash_freq}::-o::${build.path}/${filename}.bin::${build.path}/${filename}.elf
 
-
-#python "/home/matt/.arduino15/packages/esp32/tools/esptool/2.3.1/esptool.py" --chip esp32 elf2image --flash_mode "dio" --flash_freq "80m" --flash_size "4MB" -o "/tmp/arduino_build_738776/OLED_Demo.ino.bin" "/tmp/arduino_build_738776/OLED_Demo.ino.elf"
 
