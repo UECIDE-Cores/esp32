@@ -1,5 +1,6 @@
 Source: esp32
-Section: cores
+#Section: cores
+Section: main
 Priority: extra
 Maintainer: Matt Jenkins <matt@majenko.co.uk>
 XBSC-TieCore: esp32
@@ -7,7 +8,7 @@ Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.4
 
 Package: esp32
-Section: cores
+#Section: cores
 Architecture: all
 XBSC-Group: Cores
 XBSC-Subgroup: ESP32
@@ -15,7 +16,7 @@ Depends: esptool-esp32
 Description: ESP32 Arduino Compatability
 
 Package: libarduinoota
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -25,7 +26,7 @@ Provides: ArduinoOTA.h
 Description: ArduinoOTA library
 
 Package: libasyncudp
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -35,7 +36,7 @@ Provides: AsyncUDP.h
 Description: AsyncUDP library
 
 Package: libazureiot
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -45,7 +46,7 @@ Provides: AzureIoT.h
 Description: AzureIoT library
 
 Package: libble
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -55,7 +56,7 @@ Provides: BLE.h
 Description: BLE library
 
 Package: libbluetoothserial
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -65,7 +66,7 @@ Provides: BluetoothSerial.h
 Description: BluetoothSerial library
 
 Package: libdnsserver
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -75,7 +76,7 @@ Provides: DNSServer.h
 Description: DNSServer library
 
 Package: libeeprom
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Storage
@@ -85,7 +86,7 @@ Provides: EEPROM.h
 Description: EEPROM library
 
 Package: libesp32
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: BoardSupport
@@ -94,7 +95,7 @@ Provides: ESP32.h
 Description: ESP32 library
 
 Package: libespmdns
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -104,7 +105,7 @@ Provides: ESPmDNS.h
 Description: ESPmDNS library
 
 Package: libfs
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Storage
@@ -113,7 +114,7 @@ Provides: FS.h
 Description: FS library
 
 Package: libhttpclient
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -123,7 +124,7 @@ Provides: HTTPClient.h
 Description: HTTPClient library
 
 Package: libnetbios
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -133,7 +134,7 @@ Provides: NetBIOS.h
 Description: NetBIOS library
 
 Package: libpreferences
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Storage
@@ -142,7 +143,7 @@ Provides: Preferences.h
 Description: Preferences library
 
 Package: libsd
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Storage
@@ -152,7 +153,7 @@ Provides: SD.h
 Description: SD library
 
 Package: libsd-mmc
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Storage
@@ -162,7 +163,7 @@ Provides: SD-UL-MMC.h
 Description: SD MMC library
 
 Package: libsimpleble
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -172,7 +173,7 @@ Provides: SimpleBLE.h
 Description: SimpleBLE library
 
 Package: libspi
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -182,7 +183,7 @@ Provides: SPI.h
 Description: SPI library
 
 Package: libspiffs
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Storage
@@ -191,7 +192,7 @@ Provides: SPIFFS.h
 Description: SPIFFS library
 
 Package: libticker
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Time
@@ -201,7 +202,7 @@ Provides: Ticker.h
 Description: Ticker library
 
 Package: libupdate
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: BoardSupport
@@ -210,7 +211,7 @@ Provides: Update.h
 Description: Update library
 
 Package: libwebserver
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -220,7 +221,7 @@ Provides: WebServer.h
 Description: WebServer library
 
 Package: libwifi
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -230,7 +231,7 @@ Provides: WiFi.h
 Description: WiFi library
 
 Package: libwificlientsecure
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -240,7 +241,7 @@ Provides: WiFiClientSecure.h
 Description: WiFiClientSecure library
 
 Package: libwire
-Section: libraries
+#Section: libraries
 Architecture: all
 XBSC-Group: Libraries
 XBSC-Subgroup: Communications
@@ -250,7 +251,7 @@ Provides: Wire.h
 Description: Wire library
 
 Package: esp32-generic
-Section: boards
+#Section: boards
 Architecture: all
 XBSC-Group: Boards
 XBSC-Subgroup: ESP32
