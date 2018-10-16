@@ -1,4 +1,4 @@
-esp32-1.0.0/libraries/WiFi/examples/ libraries/Communications/WiFi
-esp32-1.0.0/libraries/WiFi/keywords.txt libraries/Communications/WiFi
-esp32-1.0.0/libraries/WiFi/library.properties libraries/Communications/WiFi
-esp32-1.0.0/libraries/WiFi/src/ libraries/Communications/WiFi
+esp32-1.0.0/libraries/WiFi/examples/ libraries/Communications/esp32/WiFi
+esp32-1.0.0/libraries/WiFi/keywords.txt libraries/Communications/esp32/WiFi
+esp32-1.0.0/libraries/WiFi/library.properties libraries/Communications/esp32/WiFi
+esp32-1.0.0/libraries/WiFi/src/ libraries/Communications/esp32/WiFi

@@ -12,10 +12,11 @@ Package: esp32
 Architecture: all
 XBSC-Group: Cores
 XBSC-Subgroup: ESP32
-Depends: esptool-esp32
+Depends: esptool-esp32, xtensa-esp32-elf
+Recommends: libarduinoota-esp32, libasyncudp-esp32, libazureiot-esp32, libble-esp32, libbluetoothserial-esp32, libdnsserver-esp32, libeeprom-esp32, libesp32-esp32, libespmdns-esp32, libfs-esp32, libhttpclient-esp32, libnetbios-esp32, libpreferences-esp32, libsd-esp32, libsd-mmc-esp32, libsimpleble-esp32, libspi-esp32, libspiffs-esp32, libticker-esp32, libupdate-esp32, libwebserver-esp32, libwifi-esp32, libwificlientsecure-esp32, libwire-esp32
 Description: ESP32 Arduino Compatability
 
-Package: libarduinoota
+Package: libarduinoota-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -25,7 +26,7 @@ Depends: esp32
 Provides: ArduinoOTA.h
 Description: ArduinoOTA library
 
-Package: libasyncudp
+Package: libasyncudp-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -35,7 +36,7 @@ Depends: esp32
 Provides: AsyncUDP.h
 Description: AsyncUDP library
 
-Package: libazureiot
+Package: libazureiot-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -45,7 +46,7 @@ Depends: esp32
 Provides: AzureIoT.h
 Description: AzureIoT library
 
-Package: libble
+Package: libble-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -55,7 +56,7 @@ Depends: esp32
 Provides: BLE.h
 Description: BLE library
 
-Package: libbluetoothserial
+Package: libbluetoothserial-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -65,7 +66,7 @@ Depends: esp32
 Provides: BluetoothSerial.h
 Description: BluetoothSerial library
 
-Package: libdnsserver
+Package: libdnsserver-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -75,7 +76,7 @@ Depends: esp32
 Provides: DNSServer.h
 Description: DNSServer library
 
-Package: libeeprom
+Package: libeeprom-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -85,7 +86,7 @@ Depends: esp32
 Provides: EEPROM.h
 Description: EEPROM library
 
-Package: libesp32
+Package: libesp32-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -94,7 +95,7 @@ Depends: esp32
 Provides: ESP32.h
 Description: ESP32 library
 
-Package: libespmdns
+Package: libespmdns-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -104,7 +105,7 @@ Depends: esp32
 Provides: ESPmDNS.h
 Description: ESPmDNS library
 
-Package: libfs
+Package: libfs-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -113,7 +114,7 @@ Depends: esp32
 Provides: FS.h
 Description: FS library
 
-Package: libhttpclient
+Package: libhttpclient-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -123,7 +124,7 @@ Depends: esp32
 Provides: HTTPClient.h
 Description: HTTPClient library
 
-Package: libnetbios
+Package: libnetbios-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -133,7 +134,7 @@ Depends: esp32
 Provides: NetBIOS.h
 Description: NetBIOS library
 
-Package: libpreferences
+Package: libpreferences-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -142,7 +143,7 @@ Depends: esp32
 Provides: Preferences.h
 Description: Preferences library
 
-Package: libsd
+Package: libsd-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -152,7 +153,7 @@ Depends: esp32
 Provides: SD.h
 Description: SD library
 
-Package: libsd-mmc
+Package: libsd-mmc-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -162,7 +163,7 @@ Depends: esp32
 Provides: SD-UL-MMC.h
 Description: SD MMC library
 
-Package: libsimpleble
+Package: libsimpleble-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -172,7 +173,7 @@ Depends: esp32
 Provides: SimpleBLE.h
 Description: SimpleBLE library
 
-Package: libspi
+Package: libspi-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -182,7 +183,7 @@ Depends: esp32
 Provides: SPI.h
 Description: SPI library
 
-Package: libspiffs
+Package: libspiffs-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -191,7 +192,7 @@ Depends: esp32
 Provides: SPIFFS.h
 Description: SPIFFS library
 
-Package: libticker
+Package: libticker-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -201,7 +202,7 @@ Depends: esp32
 Provides: Ticker.h
 Description: Ticker library
 
-Package: libupdate
+Package: libupdate-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -210,7 +211,7 @@ Depends: esp32
 Provides: Update.h
 Description: Update library
 
-Package: libwebserver
+Package: libwebserver-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -220,7 +221,7 @@ Depends: esp32
 Provides: WebServer.h
 Description: WebServer library
 
-Package: libwifi
+Package: libwifi-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -230,7 +231,7 @@ Depends: esp32
 Provides: WiFi.h
 Description: WiFi library
 
-Package: libwificlientsecure
+Package: libwificlientsecure-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries
@@ -240,7 +241,7 @@ Depends: esp32
 Provides: WiFiClientSecure.h
 Description: WiFiClientSecure library
 
-Package: libwire
+Package: libwire-esp32
 #Section: libraries
 Architecture: all
 XBSC-Group: Libraries

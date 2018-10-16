@@ -1,3 +1,3 @@
-esp32-1.0.0/libraries/SD_MMC/examples/ libraries/Storage/SD_MMC
-esp32-1.0.0/libraries/SD_MMC/library.properties libraries/Storage/SD_MMC
-esp32-1.0.0/libraries/SD_MMC/src/ libraries/Storage/SD_MMC
+esp32-1.0.0/libraries/SD_MMC/examples/ libraries/Storage/esp32/SD_MMC
+esp32-1.0.0/libraries/SD_MMC/library.properties libraries/Storage/esp32/SD_MMC
+esp32-1.0.0/libraries/SD_MMC/src/ libraries/Storage/esp32/SD_MMC

@@ -1,4 +1,4 @@
-esp32-1.0.0/libraries/ArduinoOTA/examples/ libraries/Communications/ArduinoOTA
-esp32-1.0.0/libraries/ArduinoOTA/keywords.txt libraries/Communications/ArduinoOTA
-esp32-1.0.0/libraries/ArduinoOTA/library.properties libraries/Communications/ArduinoOTA
-esp32-1.0.0/libraries/ArduinoOTA/src/ libraries/Communications/ArduinoOTA
+esp32-1.0.0/libraries/ArduinoOTA/examples/ libraries/Communications/esp32/ArduinoOTA
+esp32-1.0.0/libraries/ArduinoOTA/keywords.txt libraries/Communications/esp32/ArduinoOTA
+esp32-1.0.0/libraries/ArduinoOTA/library.properties libraries/Communications/esp32/ArduinoOTA
+esp32-1.0.0/libraries/ArduinoOTA/src/ libraries/Communications/esp32/ArduinoOTA

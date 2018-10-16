@@ -1,5 +1,5 @@
-esp32-1.0.0/libraries/BluetoothSerial/README.md libraries/Communications/BluetoothSerial
-esp32-1.0.0/libraries/BluetoothSerial/examples/ libraries/Communications/BluetoothSerial
-esp32-1.0.0/libraries/BluetoothSerial/keywords.txt libraries/Communications/BluetoothSerial
-esp32-1.0.0/libraries/BluetoothSerial/library.properties libraries/Communications/BluetoothSerial
-esp32-1.0.0/libraries/BluetoothSerial/src/ libraries/Communications/BluetoothSerial
+esp32-1.0.0/libraries/BluetoothSerial/README.md libraries/Communications/esp32/BluetoothSerial
+esp32-1.0.0/libraries/BluetoothSerial/examples/ libraries/Communications/esp32/BluetoothSerial
+esp32-1.0.0/libraries/BluetoothSerial/keywords.txt libraries/Communications/esp32/BluetoothSerial
+esp32-1.0.0/libraries/BluetoothSerial/library.properties libraries/Communications/esp32/BluetoothSerial
+esp32-1.0.0/libraries/BluetoothSerial/src/ libraries/Communications/esp32/BluetoothSerial

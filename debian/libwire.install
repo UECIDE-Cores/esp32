@@ -1,3 +1,3 @@
-esp32-1.0.0/libraries/Wire/keywords.txt libraries/Communications/Wire
-esp32-1.0.0/libraries/Wire/library.properties libraries/Communications/Wire
-esp32-1.0.0/libraries/Wire/src/ libraries/Communications/Wire
+esp32-1.0.0/libraries/Wire/keywords.txt libraries/Communications/esp32/Wire
+esp32-1.0.0/libraries/Wire/library.properties libraries/Communications/esp32/Wire
+esp32-1.0.0/libraries/Wire/src/ libraries/Communications/esp32/Wire
