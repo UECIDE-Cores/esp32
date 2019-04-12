@@ -1,3 +1,15 @@
+esp32 (1.0.8) uecide; urgency=low
+
+  * Fixed family
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Mon, 3 Dec 2018 15:46:32 +0000
+
+esp32 (1.0.7) uecide; urgency=low
+
+  * Initial import of extra boards
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 16 Oct 2018 15:23:22 +0100
+
 esp32 (1.0.6) uecide; urgency=low
 
   * Fixed parts recipe
