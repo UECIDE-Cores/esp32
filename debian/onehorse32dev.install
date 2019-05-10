@@ -1,2 +1,2 @@
 debian/boards/onehorse32dev/board.txt boards/ESP32/onehorse32dev
-esp32-1.0.0/variants/onehorse32dev/pins_arduino.h boards/ESP32/onehorse32dev
+esp32-1.0.2/variants/onehorse32dev/pins_arduino.h boards/ESP32/onehorse32dev

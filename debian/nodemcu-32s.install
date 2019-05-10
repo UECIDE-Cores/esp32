@@ -1,2 +1,2 @@
 debian/boards/nodemcu-32s/board.txt boards/ESP32/nodemcu-32s
-esp32-1.0.0/variants/nodemcu-32s/pins_arduino.h boards/ESP32/nodemcu-32s
+esp32-1.0.2/variants/nodemcu-32s/pins_arduino.h boards/ESP32/nodemcu-32s

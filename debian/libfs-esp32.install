@@ -1,2 +1,2 @@
-esp32-1.0.0/libraries/FS/library.properties libraries/Storage/esp32/FS
-esp32-1.0.0/libraries/FS/src/ libraries/Storage/esp32/FS
+esp32-1.0.2/libraries/FS/library.properties libraries/Storage/esp32/FS
+esp32-1.0.2/libraries/FS/src/ libraries/Storage/esp32/FS

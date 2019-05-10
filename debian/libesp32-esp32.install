@@ -1,3 +1,3 @@
-esp32-1.0.0/libraries/ESP32/examples/ libraries/BoardSupport/esp32/ESP32
-esp32-1.0.0/libraries/ESP32/library.properties libraries/BoardSupport/esp32/ESP32
-esp32-1.0.0/libraries/ESP32/src/ libraries/BoardSupport/esp32/ESP32
+esp32-1.0.2/libraries/ESP32/examples/ libraries/BoardSupport/esp32/ESP32
+esp32-1.0.2/libraries/ESP32/library.properties libraries/BoardSupport/esp32/ESP32
+esp32-1.0.2/libraries/ESP32/src/ libraries/BoardSupport/esp32/ESP32
