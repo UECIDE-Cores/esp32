@@ -1,4 +1,1 @@
-esp32-1.0.2/libraries/Ticker/examples/ libraries/Time/esp32/Ticker
-esp32-1.0.2/libraries/Ticker/keywords.txt libraries/Time/esp32/Ticker
-esp32-1.0.2/libraries/Ticker/library.properties libraries/Time/esp32/Ticker
-esp32-1.0.2/libraries/Ticker/src/ libraries/Time/esp32/Ticker
+esp32-1.0.2/libraries/Ticker libraries/Time/esp32

@@ -1,5 +1,1 @@
-esp32-1.0.2/libraries/AzureIoT/LICENSE libraries/Communications/esp32/AzureIoT
-esp32-1.0.2/libraries/AzureIoT/README.md libraries/Communications/esp32/AzureIoT
-esp32-1.0.2/libraries/AzureIoT/examples/ libraries/Communications/esp32/AzureIoT
-esp32-1.0.2/libraries/AzureIoT/library.properties libraries/Communications/esp32/AzureIoT
-esp32-1.0.2/libraries/AzureIoT/src/ libraries/Communications/esp32/AzureIoT
+esp32-1.0.2/libraries/AzureIoT libraries/Communications/esp32

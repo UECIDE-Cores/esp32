@@ -1,4 +1,1 @@
-esp32-1.0.2/libraries/BLE/README.md libraries/Communications/esp32/BLE
-esp32-1.0.2/libraries/BLE/examples/ libraries/Communications/esp32/BLE
-esp32-1.0.2/libraries/BLE/library.properties libraries/Communications/esp32/BLE
-esp32-1.0.2/libraries/BLE/src/ libraries/Communications/esp32/BLE
+esp32-1.0.2/libraries/BLE libraries/Communications/esp32
