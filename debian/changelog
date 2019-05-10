@@ -1,3 +1,9 @@
+esp32 (1.0.9) uecide; urgency=low
+
+  * Fixed missing board definition macro
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Fri, 12 Apr 2019 12:16:19 +0100
+
 esp32 (1.0.8) uecide; urgency=low
 
   * Fixed family
