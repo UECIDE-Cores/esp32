@@ -43,9 +43,10 @@ icon.22=icons/expressif_22.png
 
 programmer.chip=esp32
 
+core.partition=${onefile:${sketch:root}/partitions.csv,${find:${board:root}::${core:root}/partitions,${build.partitions}.csv}}
 
-compile.autogen.parts=python::${core.root}/gen_esp32part.py::-q::${core.root}/partitions/${build.partitions}.csv::${build.path}/${filename}.partitions.bin
-compile.autogen.parts.windows=${core.root}/gen_esp32part.exe::-q::${core.root}/partitions/${build.partitions}.csv::${build.path}/${filename}.partitions.bin
+compile.autogen.parts=python::${core.root}/gen_esp32part.py::-q::${core.partition}::${build.path}/${filename}.partitions.bin
+compile.autogen.parts.windows=${core.root}/gen_esp32part.exe::-q::${core.partition}::${build.path}/${filename}.partitions.bin
 
 compile.autogen.bin.linux=${programmer:esptool-esp32,programmer.interpreter}::${programmer:esptool-esp32,root}/linux/esptool.py::--chip::esp32::elf2image::--flash_mode::${build.flash_mode}::--flash_freq::${build.flash_freq}::-o::${build.path}/${filename}.bin::${build.path}/${filename}.elf
 compile.autogen.bin.macos=${programmer:esptool-esp32,root}/macos/esptool::--chip::esp32::elf2image::--flash_mode::${build.flash_mode}::--flash_freq::${build.flash_freq}::-o::${build.path}/${filename}.bin::${build.path}/${filename}.elf
