@@ -14,7 +14,6 @@ build.flash_size=4MB
 build.flash_freq=40m
 build.flash_mode=dio
 build.boot=dio
-build.partitions=default
 build.defines=
 
 options.PSRAM.name=PSRAM
@@ -24,20 +23,6 @@ options.PSRAM.disabled.build.defines=
 options.PSRAM.enabled.name=Enabled
 options.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-issue
 build.defines=${option:PSRAM.build.defines}
-
-options.PartitionScheme.name=Partition Scheme
-options.PartitionScheme.default=defaultschem
-options.PartitionScheme.defaultschem.name=Default
-options.PartitionScheme.defaultschem.build.partitions=default
-options.PartitionScheme.minimal.name=Minimal (2MB FLASH)
-options.PartitionScheme.minimal.build.partitions=minimal
-options.PartitionScheme.no_ota.name=No OTA (Large APP)
-options.PartitionScheme.no_ota.build.partitions=no_ota
-options.PartitionScheme.no_ota.upload.maximum_size=2097152
-options.PartitionScheme.min_spiffs.name=Minimal SPIFFS (Large APPS with OTA)
-options.PartitionScheme.min_spiffs.build.partitions=min_spiffs
-options.PartitionScheme.min_spiffs.upload.maximum_size=1966080
-build.partitions=${option:PartitionScheme.build.partitions}
 
 options.FlashFreq.name=Flash Frequency
 options.FlashFreq.default=80

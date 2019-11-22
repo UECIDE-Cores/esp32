@@ -20,7 +20,6 @@ build.f_cpu=240000000L
 build.flash_mode=dio
 build.flash_size=4MB
 build.boot=dio
-build.partitions=default
 
 options.FlashFreq.name=Flash Frequency
 options.FlashFreq.default=80

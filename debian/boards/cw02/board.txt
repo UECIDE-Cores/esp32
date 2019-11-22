@@ -14,7 +14,6 @@ build.flash_size=4MB
 build.flash_freq=40m
 build.flash_mode=dio
 build.boot=dio
-build.partitions=default
 
 options.FlashMode.name=Flash Mode
 options.FlashMode.default=qio
