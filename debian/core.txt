@@ -102,6 +102,7 @@ build.code_debug=${option:DebugLevel.build.code_debug}
 
 build.partitions=${option:PartitionScheme.build.partitions}
 
+options.PartitionScheme.name=Partition Scheme
 options.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
 options.PartitionScheme.default.build.partitions=default
 options.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)

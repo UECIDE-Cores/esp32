@@ -1,3 +1,9 @@
+esp32 (1.1.8) uecide; urgency=low
+
+  * Test of 1.0.4
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Fri, 22 Nov 2019 10:49:19 +0000
+
 esp32 (1.1.7) uecide; urgency=low
 
   * Add more upload baud rates
