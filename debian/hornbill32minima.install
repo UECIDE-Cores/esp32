@@ -1,2 +1,2 @@
 debian/boards/hornbill32minima/board.txt boards/ESP32/hornbill32minima
-esp32-1.0.2/variants/hornbill32minima/pins_arduino.h boards/ESP32/hornbill32minima
+esp32/variants/hornbill32minima/pins_arduino.h boards/ESP32/hornbill32minima

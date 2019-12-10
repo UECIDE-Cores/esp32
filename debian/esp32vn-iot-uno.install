@@ -1,2 +1,2 @@
 debian/boards/esp32vn-iot-uno/board.txt boards/ESP32/esp32vn-iot-uno
-esp32-1.0.2/variants/esp32vn-iot-uno/pins_arduino.h boards/ESP32/esp32vn-iot-uno
+esp32/variants/esp32vn-iot-uno/pins_arduino.h boards/ESP32/esp32vn-iot-uno

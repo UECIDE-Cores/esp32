@@ -1,2 +1,2 @@
 debian/boards/hornbill32dev/board.txt boards/ESP32/hornbill32dev
-esp32-1.0.2/variants/hornbill32dev/pins_arduino.h boards/ESP32/hornbill32dev
+esp32/variants/hornbill32dev/pins_arduino.h boards/ESP32/hornbill32dev

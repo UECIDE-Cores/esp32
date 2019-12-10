@@ -1,3 +1,15 @@
+esp32 (1.2.0) uecide; urgency=low
+
+  * Added missing .name entries to partition schemas
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Fri, 22 Nov 2019 11:15:06 +0000
+
+esp32 (1.1.9) uecide; urgency=low
+
+  * Added missing partition scheme menu entry name
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Fri, 22 Nov 2019 11:00:29 +0000
+
 esp32 (1.1.8) uecide; urgency=low
 
   * Test of 1.0.4

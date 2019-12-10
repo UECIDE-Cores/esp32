@@ -1,2 +1,2 @@
 debian/boards/featheresp32/board.txt boards/ESP32/featheresp32
-esp32-1.0.2/variants/feather_esp32/pins_arduino.h boards/ESP32/featheresp32
+esp32/variants/feather_esp32/pins_arduino.h boards/ESP32/featheresp32

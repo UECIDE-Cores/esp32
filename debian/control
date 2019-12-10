@@ -193,6 +193,14 @@ Depends: esp32
 Provides: SPIFFS.h
 Description: SPIFFS library
 
+Package: libffat-esp32
+Architecture: all
+XBSC-Group: Libraries
+XBSC-Subgroup: Storage
+Depends: esp32
+Provides: FFat.h
+Description: FFat Library
+
 Package: libticker-esp32
 #Section: libraries
 Architecture: all
