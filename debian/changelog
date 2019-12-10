@@ -1,3 +1,9 @@
+esp32 (1.2.1) uecide; urgency=low
+
+  * Updated install files to get correct version. Added ffat library
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 10 Dec 2019 13:49:58 +0000
+
 esp32 (1.2.0) uecide; urgency=low
 
   * Added missing .name entries to partition schemas
