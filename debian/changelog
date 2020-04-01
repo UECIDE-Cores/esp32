@@ -1,3 +1,15 @@
+esp32 (1.2.3) uecide; urgency=low
+
+  * Fixed PSRAM
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 10 Dec 2019 13:57:12 +0000
+
+esp32 (1.2.2) uecide; urgency=low
+
+  * Updated changelog
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 10 Dec 2019 13:57:12 +0000
+
 esp32 (1.2.1) uecide; urgency=low
 
   * Updated install files to get correct version. Added ffat library

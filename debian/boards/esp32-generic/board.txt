@@ -20,11 +20,12 @@ build.f_cpu=240000000L
 build.boot=${option:FlashMode.build.flash_boot}
 
 options.PSRAM.name=PSRAM
+oprions.PSRAM.purge=true
 options.PSRAM.default=disabled
 options.PSRAM.disabled.name=Disabled
 options.PSRAM.disabled.build.defines=
 options.PSRAM.enabled.name=Enabled
-options.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-issue
+options.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM::-mfix-esp32-psram-cache-issue
 build.defines=${option:PSRAM.build.defines}
 
 options.FlashMode.name=Flash Mode

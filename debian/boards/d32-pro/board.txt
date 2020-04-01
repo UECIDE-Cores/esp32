@@ -17,11 +17,12 @@ build.boot=dio
 build.defines=
 
 options.PSRAM.name=PSRAM
+options.PSRAM.purge=true
 options.PSRAM.default=disabled
 options.PSRAM.disabled.name=Disabled
 options.PSRAM.disabled.build.defines=
 options.PSRAM.enabled.name=Enabled
-options.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-issue
+options.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM::-mfix-esp32-psram-cache-issue
 build.defines=${option:PSRAM.build.defines}
 
 options.FlashFreq.name=Flash Frequency

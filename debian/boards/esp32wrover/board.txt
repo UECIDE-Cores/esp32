@@ -14,7 +14,7 @@ build.flash_size=4MB
 build.flash_freq=40m
 build.flash_mode=dio
 build.boot=dio
-build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-issue
+build.defines=-DBOARD_HAS_PSRAM::-mfix-esp32-psram-cache-issue
 
 options.FlashMode.name=Flash Mode
 options.FlashMode.default=qio
