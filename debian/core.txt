@@ -1,6 +1,7 @@
 name=esp32
 description=ESP32 Arduino compatibility layer
 core.library.esp32=esp32
+core.library.base64=esp32/libb64
 
 upload.resetmethod=ck
 

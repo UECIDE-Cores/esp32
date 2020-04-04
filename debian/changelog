@@ -1,8 +1,20 @@
-esp32 (1.2.3) uecide; urgency=low
+esp32 (1.2.5) uecide; urgency=low
+
+  * Included libb64 into the core compilation
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Wed, 1 Apr 2020 17:45:09 +0100
+
+esp32 (1.2.4) uecide; urgency=low
 
   * Fixed PSRAM
 
- -- Matt Jenkins <matt@majenko.co.uk>  Tue, 10 Dec 2019 13:57:12 +0000
+ -- Matt Jenkins <matt@majenko.co.uk>  Wed, 1 Apr 2020 17:45:09 +0100
+
+esp32 (1.2.3) uecide; urgency=low
+
+  * Added gitignore
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 10 Dec 2019 13:59:03 +0000
 
 esp32 (1.2.2) uecide; urgency=low
 
