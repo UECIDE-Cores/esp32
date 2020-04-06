@@ -1,2 +1,0 @@
-debian/boards/nano32/board.txt boards/ESP32/nano32
-esp32/variants/nano32/pins_arduino.h boards/ESP32/nano32

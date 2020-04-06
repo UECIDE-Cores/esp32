@@ -1,2 +1,0 @@
-debian/boards/wemosbat/board.txt boards/ESP32/wemosbat
-esp32/variants/pocket_32/pins_arduino.h boards/ESP32/wemosbat

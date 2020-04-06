@@ -1,2 +1,0 @@
-debian/boards/widora-air/board.txt boards/ESP32/widora-air
-esp32/variants/widora-air/pins_arduino.h boards/ESP32/widora-air

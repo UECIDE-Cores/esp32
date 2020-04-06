@@ -1,2 +1,0 @@
-debian/boards/pocket-32/board.txt boards/ESP32/pocket-32
-esp32/variants/pocket_32/pins_arduino.h boards/ESP32/pocket-32

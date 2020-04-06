@@ -1,2 +1,0 @@
-debian/boards/espea32/board.txt boards/ESP32/espea32
-esp32/variants/espea32/pins_arduino.h boards/ESP32/espea32

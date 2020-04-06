@@ -1,2 +1,0 @@
-debian/boards/wipy3/board.txt boards/ESP32/wipy3
-esp32/variants/wipy3/pins_arduino.h boards/ESP32/wipy3

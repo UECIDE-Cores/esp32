@@ -1,2 +1,0 @@
-debian/boards/m5stack-fire/board.txt boards/ESP32/m5stack-fire
-esp32/variants/m5stack_fire/pins_arduino.h boards/ESP32/m5stack-fire

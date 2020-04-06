@@ -1,2 +1,0 @@
-debian/boards/espectro32/board.txt boards/ESP32/espectro32
-esp32/variants/espectro32/pins_arduino.h boards/ESP32/espectro32

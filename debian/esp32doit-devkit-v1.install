@@ -1,2 +1,0 @@
-debian/boards/esp32doit-devkit-v1/board.txt boards/ESP32/esp32doit-devkit-v1
-esp32/variants/doitESP32devkitV1/pins_arduino.h boards/ESP32/esp32doit-devkit-v1
