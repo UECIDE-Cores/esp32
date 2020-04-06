@@ -1,0 +1,222 @@
+#!/usr/bin/php
+<?php
+
+$data = file_get_contents("esp32/boards.txt");
+$lines = explode("\n", $data);
+
+$tree = array();
+
+foreach ($lines as $line) {
+    $line = trim($line);
+    if ($line == "") continue;
+    if (substr($line, 0, 1) == '#') continue;
+    
+    if (preg_match('/^\s*([^\s\.]+)\.([^\s]+)\s*=\s*(.*)/', $line, $m)) {
+        $tree[$m[1]][$m[2]] = $m[3];
+    }
+}
+
+$final = array();
+
+foreach ($tree as $board=>$data) {
+
+    if ($board == "menu") continue;
+    $fixedboard = strtolower($board);
+    $fixedboard = str_replace("_", "-", $fixedboard);
+    if ($fixedboard == "esp32") $fixedboard = "esp32-generic";
+
+    $final[$fixedboard]["name"] = $fixedboard;
+    $final[$fixedboard]["description"] = $data["name"];
+    $final[$fixedboard]["group"] = "ESP32";
+    $final[$fixedboard]["family"] = "esp32";
+    $final[$fixedboard]["core"] = "esp32";
+
+    foreach ($data as $k=>$v) {
+        if (substr($k, 0, 6) == "build.") {
+            $final[$fixedboard][$k] = str_replace(" ", "::", $v);
+        }
+        if (substr($k, 0, 7) == "upload.") {
+            $final[$fixedboard][$k] = $v;
+        }
+        if (substr($k, 0, 7) == "serial.") {
+            $final[$fixedboard][$k] = $v;
+        }
+    }
+
+    $options = subtree($data, "menu");
+    $menus = subkeys($options);
+
+    if (in_array("UploadSpeed", $menus)) {
+        $final[$fixedboard]["options.UploadSpeed.name"] = "Upload Speed";
+        $final[$fixedboard]["upload.speed"] = '${option:UploadSpeed.upload.speed}';
+    }
+
+    if (in_array("CPUFreq", $menus)) {
+        $final[$fixedboard]["options.CPUFreq.name"] = "CPU Frequency";
+        $final[$fixedboard]["build.f_cpu"] = '${option:CPUFreq.build.f_cpu}';
+        $final[$fixedboard]["options.CPUFreq.purge"] = "true";
+    }
+
+    if (in_array("FlashFreq", $menus)) {
+        $final[$fixedboard]["options.FlashFreq.name"] = "Flash Frequency";
+        $final[$fixedboard]["build.flash_freq"] = '${option:FlashFreq.build.flash_freq}';
+    }
+
+    if (in_array("FlashMode", $menus)) {
+        $final[$fixedboard]["options.FlashMode.name"] = "Flash Mode";
+        $final[$fixedboard]["build.flash_mode"] = '${option:FlashMode.build.flash_mode}';
+        $final[$fixedboard]["build.boot"] = '${option:FlashMode.build.boot}';
+    }
+
+    if (in_array("FlashSize", $menus)) {
+        $final[$fixedboard]["options.FlashSize.name"] = "Flash Size";
+        $final[$fixedboard]["build.flash_size"] = '${option:FlashSize.build.flash_size}';
+    }
+
+    if (in_array("PartitionScheme", $menus)) {
+        $final[$fixedboard]["options.PartitionScheme.name"] = "Partition Scheme";
+        $final[$fixedboard]["build.partitions"] = '${option:PartitionScheme.build.partitions}';
+    }
+
+    if (in_array("DebugLevel", $menus)) {
+        $final[$fixedboard]["options.DebugLevel.name"] = "Debug Level";
+        $final[$fixedboard]["build.code_debug"] = '${option:DebugLevel.build.code_debug}';
+    }
+
+    if (in_array("PSRAM", $menus)) {
+        $final[$fixedboard]["build.defines"] = '${option:PSRAM.build.defines}';
+        $final[$fixedboard]["options.PSRAM.name"] = "PSRAM";
+        $final[$fixedboard]["options.PSRAM.purge"] = "true";
+    }
+
+    if (in_array("Revision", $menus)) {
+        $final[$fixedboard]["options.Revision.name"] = "Board Revision";
+        $final[$fixedboard]["options.Revision.purge"] = "true";
+        $final[$fixedboard]["build.board"] = '${option:Revision.build.board}';
+    }
+
+    foreach ($menus as $menu) {
+        $opts = subtree($options, $menu);
+        $last = null;
+        $first = true;
+        foreach ($opts as $opt=>$oval) {
+            $bits = explode(".", $opt);
+            if (count($bits) == 1) { // Name
+                if ($first) {
+                    $final[$fixedboard]["options." . $menu . ".default"] = $bits[0];
+                    $first = false;
+                }
+                $final[$fixedboard]["options." . $menu . "." . $bits[0] . ".name"] = $oval;
+            } else {
+                $final[$fixedboard]["options." . $menu . "." . $opt] = str_replace(" ", "::", $oval);
+            } 
+        }
+    }
+
+}
+
+@mkdir("boards");
+
+foreach ($final as $board=>$data) {
+    @mkdir("boards/" . $board);
+
+    $boardtxt = "";
+    foreach ($data as $k=>$v) {
+        $boardtxt .= "$k=$v\n";
+    }
+    file_put_contents("boards/" . $board . "/board.txt", $boardtxt);
+
+    $var = "esp32/variants/" . $data['build.variant'];
+
+    $pins = file_get_contents($var. "/pins_arduino.h");
+    $pinlines = explode("\n", $pins);
+
+    $pout = array();
+
+    $hasd32 = false;
+
+    foreach ($pinlines as $pl) {
+        if (preg_match('/#include(.*)d32_core.h/', $pl, $m)) {
+            $pl = "#include <d32_core.h>";
+            copy("esp32/variants/d32/d32_core.h", "boards/" . $board . "/d32_core.h");
+            $hasd32 = true;
+        }
+        $pout[] = $pl;
+    }
+    file_put_contents("boards/" . $board . "/pins_arduino.h", implode("\n", $pout));
+
+    @mkdir("boards/" . $board . "/debian");
+    $control = array();
+    $control[] = 'Source: ' . $board;
+    $control[] = 'Section: main';
+    $control[] = 'Priority: extra';
+    $control[] = 'Maintainer: Matt Jenkins <matt@majenko.co.uk>';
+    $control[] = 'XBSC-TieCore: esp32';
+    $control[] = 'XBSC-Family: esp32';
+    $control[] = 'Build-Depends: debhelper (>= 8.0.0)';
+    $control[] = 'Standards-Version: 3.9.4';
+    $control[] = '';
+    $control[] = 'Package: ' . $board;
+    $control[] = 'Architecture: all';
+    $control[] = 'XBSC-Group: Boards';
+    $control[] = 'XBSC-Subgroup: ESP32';
+    $control[] = 'Depends: esp32';
+    $control[] = 'Description: ' . $data['description'];
+    file_put_contents("boards/" . $board . "/debian/control", implode("\n", $control));
+
+    $install = array();
+    $install[] = "board.txt boards/ESP32/" . $board;
+    $install[] = "pins_arduino.h boards/ESP32/" . $board;
+    if ($hasd32) {
+        $install[] = "d32_core.h boards/ESP32/" . $board;
+    }
+    file_put_contents("boards/" . $board . "/debian/" . $board . ".install", implode("\n", $install));
+
+    $rules = array();
+    $rules[] = "#!/usr/bin/make -f";
+    $rules[] = "";
+    $rules[] = "%:";
+    $rules[] = "\tdh $@";
+    file_put_contents("boards/" . $board . "/debian/rules", implode("\n", $rules));
+    chmod("boards/" . $board . "/debian/rules", 0755);
+
+    file_put_contents("boards/" . $board . "/debian/compat", "9");
+    @mkdir("boards/" . $board . "/debian/source");
+    file_put_contents("boards/" . $board . "/debian/source/format", "3.0 (native)");
+
+    $date = date("r");
+    $version = "1.2.6";
+
+    $changelog = array();
+    $changelog[] = $board . " (" . $version . ") uecide; urgency=low";
+    $changelog[] = "";
+    $changelog[] = "  * Auto built from source";
+    $changelog[] = "";
+    $changelog[] = " -- Matt Jenkins <matt@majenko.co.uk>  " . $date;
+    file_put_contents("boards/" . $board . "/debian/changelog", implode("\n", $changelog));
+}
+
+function subkeys($tree) {
+    $keys = array();
+    foreach ($tree as $k=>$v) {
+        $bits = explode(".", $k);
+        $keys[$bits[0]] = 1;
+    }
+    $out = array();
+    foreach ($keys as $k=>$v) {
+        $out[] = $k;
+    }
+    return $out;
+}
+
+function subtree($tree, $key) {
+    $out = array();
+    $kdot = $key . ".";
+    foreach ($tree as $k=>$v) {
+        if (substr($k, 0, strlen($kdot)) == $kdot) {
+            $nk = substr($k, strlen($kdot));
+            $out[$nk] = $v;
+        }
+    }
+    return $out;
+}
