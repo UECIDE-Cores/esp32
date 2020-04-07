@@ -18,117 +18,23 @@ core.cppflags=-std=gnu++11::-fno-exceptions::-fexceptions::-fno-rtti
 
 sdk.dirs=config::app_trace::app_update::asio::bootloader_support::bt::coap::console::driver::esp-tls::esp32::esp_adc_cal::esp_event::esp_http_client::esp_http_server::esp_https_ota::esp_ringbuf::ethernet::expat::fatfs::freemodbus::freertos::heap::idf_test::jsmn::json::libsodium::log::lwip::mbedtls::mdns::micro-ecc::mqtt::newlib::nghttp::nvs_flash::openssl::protobuf-c::protocomm::pthread::sdmmc::smartconfig_ack::soc::spi_flash::spiffs::tcp_transport::tcpip_adapter::ulp::vfs::wear_levelling::wifi_provisioning::wpa_supplicant::xtensa-debug-module::esp-face::esp32-camera::esp-face::fb_gfx
 
-includes.sdk=${foreach:${sdk.dirs},-I${core.root}/sdk/include/%0}
+sdk.libs=esp32::phy::esp_http_client::mbedtls::rtc::esp_http_server::btdm_app::spiffs::bootloader_support::mdns::nvs_flash::fatfs::pp::net80211::jsmn::face_detection::libsodium::vfs::dl_lib::log::freertos::cxx::smartconfig_ack::xtensa-debug-module::heap::tcpip_adapter::mqtt::ulp::fd::fb_gfx::nghttp::protocomm::smartconfig::ethernet::image_util::c_nano::soc::tcp_transport::micro-ecc::face_recognition::json::wpa_supplicant::mesh::esp_https_ota::wpa2::expat::lwip::wear_levelling::app_update::driver::bt::espnow::coap::asio::newlib::console::app_trace::esp32-camera::hal::protobuf-c::sdmmc::core::pthread::coexist::freemodbus::spi_flash::esp-tls::wpa::wifi_provisioning::wps::esp_adc_cal::esp_event::openssl::esp_ringbuf::fr
 
 core.includes=${includes.sdk}
 
 core.ldflags=-nostdlib::-T::esp32_out.ld::-T::esp32.common.ld::-T::esp32.rom.ld::-T::esp32.peripherals.ld::-T::esp32.rom.spiram_incompatible_fns.ld::-u::ld_include_panic_highint_hdl::-u::call_user_start_cpu0::-Wl,--gc-sections::-Wl,-static::-Wl,--undefined=uxTopUsedPriority::-u::__cxa_guard_dummy::-u::__cxx_fatal_exception::-L${core.root}/sdk/lib::-L${core.root}/sdk/ld
 
-
-core.libs=-lesp32::-lphy::-lesp_http_client::-lmbedtls::-lrtc::-lesp_http_server::-lbtdm_app::-lspiffs::-lbootloader_support::-lmdns::-lnvs_flash::-lfatfs::-lpp::-lnet80211::-ljsmn::-lface_detection::-llibsodium::-lvfs::-ldl_lib::-llog::-lfreertos::-lcxx::-lsmartconfig_ack::-lxtensa-debug-module::-lheap::-ltcpip_adapter::-lmqtt::-lulp::-lfd::-lfb_gfx::-lnghttp::-lprotocomm::-lsmartconfig::-lethernet::-limage_util::-lc_nano::-lsoc::-ltcp_transport::-lmicro-ecc::-lface_recognition::-ljson::-lwpa_supplicant::-lmesh::-lesp_https_ota::-lwpa2::-lexpat::-llwip::-lwear_levelling::-lapp_update::-ldriver::-lbt::-lespnow::-lcoap::-lasio::-lnewlib::-lconsole::-lapp_trace::-lesp32-camera::-lhal::-lprotobuf-c::-lsdmmc::-lcore::-lpthread::-lcoexist::-lfreemodbus::-lspi_flash::-lesp-tls::-lwpa::-lwifi_provisioning::-lwps::-lesp_adc_cal::-lesp_event::-lopenssl::-lesp_ringbuf::-lfr
+includes.sdk=${foreach:${sdk.dirs},-I${core.root}/sdk/include/%0}
+core.libs=${foreach:${sdk.libs},-l%0}
 
 core.header=Arduino.h
-
-icon.48=icons/expressif_48.png
-icon.128=icons/expressif_128.png
-icon.256=icons/expressif_256.png
-icon.32=icons/expressif_32.png
-icon.16=icons/expressif_16.png
-icon.64=icons/expressif_64.png
-icon.22=icons/expressif_22.png
 
 programmer.chip=esp32
 
 core.partition=${onefile:${sketch:root}/partitions.csv,${find:${board:root}::${core:root}/partitions,${build.partitions}.csv}}
 
-compile.autogen.parts=python::${core.root}/gen_esp32part.py::-q::${core.partition}::${build.path}/${filename}.partitions.bin
-compile.autogen.parts.windows=${core.root}/gen_esp32part.exe::-q::${core.partition}::${build.path}/${filename}.partitions.bin
+compile.autogen.parts=${tool:python,run}::${core.root}/gen_esp32part.py::-q::${core.partition}::${build.path}/${filename}.partitions.bin
 
 compile.autogen.bin=${programmer:esptool-esp32,programmer.run}::--chip::esp32::elf2image::--flash_mode::${build.flash_mode}::--flash_freq::${build.flash_freq}::--flash_size::${build.flash_size}::-o::${build.path}/${filename}.bin::${build.path}/${filename}.elf
 
-
-options.UploadSpeed.name=Upload Speed
-options.UploadSpeed.default=921600
-options.UploadSpeed.4000000.name=4M
-options.UploadSpeed.4000000.upload.speed=4000000
-options.UploadSpeed.3500000.name=3.5M
-options.UploadSpeed.3500000.upload.speed=3500000
-options.UploadSpeed.3000000.name=3M
-options.UploadSpeed.3000000.upload.speed=3000000
-options.UploadSpeed.2500000.name=2.5M
-options.UploadSpeed.2500000.upload.speed=2500000
-options.UploadSpeed.2000000.name=2M
-options.UploadSpeed.2000000.upload.speed=2000000
-options.UploadSpeed.1500000.name=1.5M
-options.UploadSpeed.1500000.upload.speed=1500000
-options.UploadSpeed.1000000.name=1M
-options.UploadSpeed.1000000.upload.speed=1000000
-options.UploadSpeed.921600.name=921600
-options.UploadSpeed.921600.upload.speed=921600
-options.UploadSpeed.115200.name=115200
-options.UploadSpeed.115200.upload.speed=115200
-options.UploadSpeed.256000.name=256000
-options.UploadSpeed.256000.upload.speed=256000
-options.UploadSpeed.230400.upload.speed=230400
-options.UploadSpeed.230400.name=230400
-options.UploadSpeed.460800.name=460800
-options.UploadSpeed.460800.upload.speed=460800
-options.UploadSpeed.512000.name=512000
-options.UploadSpeed.512000.upload.speed=512000
-upload.speed=${option:UploadSpeed.upload.speed}
-
-options.DebugLevel.name=Debug Level
-options.DebugLevel.default=none
-options.DebugLevel.none.name=None
-options.DebugLevel.none.build.code_debug=0
-options.DebugLevel.error.name=Error
-options.DebugLevel.error.build.code_debug=1
-options.DebugLevel.warn.name=Warn
-options.DebugLevel.warn.build.code_debug=2
-options.DebugLevel.info.name=Info
-options.DebugLevel.info.build.code_debug=3
-options.DebugLevel.debug.name=Debug
-options.DebugLevel.debug.build.code_debug=4
-options.DebugLevel.verbose.name=Verbose
-options.DebugLevel.verbose.build.code_debug=5
-build.code_debug=${option:DebugLevel.build.code_debug}
-
-build.partitions=${option:PartitionScheme.build.partitions}
-
-options.PartitionScheme.name=Partition Scheme
-options.PartitionScheme.default=defaultspiffs
-options.PartitionScheme.defaultspiffs.name=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
-options.PartitionScheme.defaultspiffs.build.partitions=default
-options.PartitionScheme.defaultffat.name=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
-options.PartitionScheme.defaultffat.build.partitions=default_ffat
-options.PartitionScheme.default_8MB.name=8M Flash (3MB APP/1.5MB FAT)
-options.PartitionScheme.default_8MB.build.partitions=default_8MB
-options.PartitionScheme.default_8MB.upload.maximum_size=3342336
-options.PartitionScheme.minimal.name=Minimal (1.3MB APP/700KB SPIFFS)
-options.PartitionScheme.minimal.build.partitions=minimal
-options.PartitionScheme.no_ota.name=No OTA (2MB APP/2MB SPIFFS)
-options.PartitionScheme.no_ota.build.partitions=no_ota
-options.PartitionScheme.no_ota.upload.maximum_size=2097152
-options.PartitionScheme.noota_3g.name=No OTA (1MB APP/3MB SPIFFS)
-options.PartitionScheme.noota_3g.build.partitions=noota_3g
-options.PartitionScheme.noota_3g.upload.maximum_size=1048576
-options.PartitionScheme.noota_ffat.name=No OTA (2MB APP/2MB FATFS)
-options.PartitionScheme.noota_ffat.build.partitions=noota_ffat
-options.PartitionScheme.noota_ffat.upload.maximum_size=2097152
-options.PartitionScheme.noota_3gffat.name=No OTA (1MB APP/3MB FATFS)
-options.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
-options.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
-options.PartitionScheme.huge_app.name=Huge APP (3MB No OTA/1MB SPIFFS)
-options.PartitionScheme.huge_app.build.partitions=huge_app
-options.PartitionScheme.huge_app.upload.maximum_size=3145728
-options.PartitionScheme.min_spiffs.name=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
-options.PartitionScheme.min_spiffs.build.partitions=min_spiffs
-options.PartitionScheme.min_spiffs.upload.maximum_size=1966080
-options.PartitionScheme.fatflash.name=16M Flash (2MB APP/12.5MB FAT)
-options.PartitionScheme.fatflash.build.partitions=ffat
-options.PartitionScheme.fatflash.upload.maximum_size=2097152
-options.PartitionScheme.app3M_fat9M_16MB.name=16M Flash (3MB APP/9MB FATFS)
-options.PartitionScheme.app3M_fat9M_16MB.build.partitions=app3M_fat9M_16MB
-options.PartitionScheme.app3M_fat9M_16MB.upload.maximum_size=3145728
-
-
+icon=espressif.png

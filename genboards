@@ -1,6 +1,8 @@
 #!/usr/bin/php
 <?php
 
+$version = "1.2.7";
+
 $data = file_get_contents("esp32/boards.txt");
 $lines = explode("\n", $data);
 
@@ -113,6 +115,8 @@ foreach ($tree as $board=>$data) {
         }
     }
 
+    $final[$fixedboard]["icon"] = 'espressif.png';
+
 }
 
 @mkdir("boards");
@@ -167,6 +171,7 @@ foreach ($final as $board=>$data) {
     $install = array();
     $install[] = "board.txt boards/ESP32/" . $board;
     $install[] = "pins_arduino.h boards/ESP32/" . $board;
+    $install[] = "espressif.png boards/ESP32/" . $board;
     if ($hasd32) {
         $install[] = "d32_core.h boards/ESP32/" . $board;
     }
@@ -185,7 +190,6 @@ foreach ($final as $board=>$data) {
     file_put_contents("boards/" . $board . "/debian/source/format", "3.0 (native)");
 
     $date = date("r");
-    $version = "1.2.6";
 
     $changelog = array();
     $changelog[] = $board . " (" . $version . ") uecide; urgency=low";
@@ -194,6 +198,8 @@ foreach ($final as $board=>$data) {
     $changelog[] = "";
     $changelog[] = " -- Matt Jenkins <matt@majenko.co.uk>  " . $date;
     file_put_contents("boards/" . $board . "/debian/changelog", implode("\n", $changelog));
+
+    copy("espressif.png", "boards/" . $board . "/espressif.png");
 }
 
 function subkeys($tree) {

@@ -4,3 +4,4 @@ esp32/tools/gen_esp32part.exe cores/esp32
 esp32/tools/gen_esp32part.py cores/esp32
 esp32/tools/partitions/ cores/esp32
 esp32/tools/sdk/ cores/esp32
+espressif.png cores/esp32
