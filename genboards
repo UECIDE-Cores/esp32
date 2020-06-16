@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-$version = "1.2.7";
+$version = "1.2.8";
 
 $data = file_get_contents("esp32/boards.txt");
 $lines = explode("\n", $data);
@@ -82,6 +82,7 @@ foreach ($tree as $board=>$data) {
 
     if (in_array("DebugLevel", $menus)) {
         $final[$fixedboard]["options.DebugLevel.name"] = "Debug Level";
+        $final[$fixedboard]["options.DebugLevel.purge"] = "true";
         $final[$fixedboard]["build.code_debug"] = '${option:DebugLevel.build.code_debug}';
     }
 
