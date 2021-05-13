@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-$version = "1.2.8";
+$version = "1.2.9";
 
 $data = file_get_contents("esp32/boards.txt");
 $lines = explode("\n", $data);
@@ -104,6 +104,11 @@ foreach ($tree as $board=>$data) {
         $first = true;
         foreach ($opts as $opt=>$oval) {
             $bits = explode(".", $opt);
+
+            if ($bits[0] == "default") {
+                $bits[0] = "default_";
+                $opt = implode(".", $bits);
+            }
             if (count($bits) == 1) { // Name
                 if ($first) {
                     $final[$fixedboard]["options." . $menu . ".default"] = $bits[0];
