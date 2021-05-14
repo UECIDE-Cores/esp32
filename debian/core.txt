@@ -1,5 +1,5 @@
 name=esp32
-description=ESP32 Arduino compatibility layer
+description=ESP32 Arduino (1.0.6)
 core.library.esp32=esp32
 core.library.base64=esp32/libb64
 

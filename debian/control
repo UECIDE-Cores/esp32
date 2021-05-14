@@ -15,7 +15,7 @@ XBSC-Group: Cores
 XBSC-Subgroup: ESP32
 Depends: esptool-esp32, xtensa-esp32-elf, python
 Recommends: libarduinoota-esp32, libasyncudp-esp32, libazureiot-esp32, libble-esp32, libbluetoothserial-esp32, libdnsserver-esp32, libeeprom-esp32, libesp32-esp32, libespmdns-esp32, libfs-esp32, libhttpclient-esp32, libnetbios-esp32, libpreferences-esp32, libsd-esp32, libsd-mmc-esp32, libsimpleble-esp32, libspi-esp32, libspiffs-esp32, libticker-esp32, libupdate-esp32, libwebserver-esp32, libwifi-esp32, libwificlientsecure-esp32, libwire-esp32
-Description: ESP32 Arduino Compatability
+Description: ESP32 Arduino (1.0.6)
 
 Package: libarduinoota-esp32
 #Section: libraries
