@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-$version = "1.2.9";
+$version = "1.3.0";
 
 $data = file_get_contents("esp32/boards.txt");
 $lines = explode("\n", $data);
@@ -191,7 +191,7 @@ foreach ($final as $board=>$data) {
     file_put_contents("boards/" . $board . "/debian/rules", implode("\n", $rules));
     chmod("boards/" . $board . "/debian/rules", 0755);
 
-    file_put_contents("boards/" . $board . "/debian/compat", "9");
+    file_put_contents("boards/" . $board . "/debian/compat", "10");
     @mkdir("boards/" . $board . "/debian/source");
     file_put_contents("boards/" . $board . "/debian/source/format", "3.0 (native)");
 
